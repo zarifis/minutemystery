@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import {StyleSheet, Text, View, Image, Button} from 'react-native';
+import {Text, ScrollView, Image, Button} from 'react-native';
 import { withNavigation } from 'react-navigation';
-
+import {styles} from '../assets/styles';
 import {stories} from '../assets/stories.js';
 
 class Story extends Component {
   constructor(){
     super();
-    this.state ={
+    this.state = {
       status:false
     }
   }
@@ -21,41 +21,25 @@ class Story extends Component {
     }
   }
 
+  //<ScrollView style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
   render() {
     const { navigation } = this.props;
     const id = navigation.getParam('id', '0');
     return(
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Image source={stories[id].thumbnail}/>
-      <Text style={styles.textFirst}> Scene </Text>
-      <Text style={styles.textSecond}>{stories[id].scene}</Text>
-      <Text style={styles.textFirst}> Story </Text>
+      <ScrollView contentContainerStyle={{ alignItems: 'center', justifyContent: 'center' }}>
+      <Image style={{width: 400, height: 400}} source={stories[id].thumbnail}/>
+      <Text style={styles.title}> Scene </Text>
+      <Text style={styles.text}>{stories[id].scene}</Text>
+      <Text style={styles.title}> Story </Text>
       {
         this.state.status ? null :  <Button title="Reveal Story" onPress={this.ShowHideTextComponentView} />
       }
       {
-        this.state.status ? <Text style={styles.textSecond}>{stories[id].story}</Text> : null
+        this.state.status ? <Text style={styles.text}>{stories[id].story}</Text> : null
       }
-      </View>
+      </ScrollView>
     );
   }
 }
-
-const styles = StyleSheet.create({
-    textFirst: {
-      fontSize: 25,
-      fontWeight: 'bold',
-      textAlign: 'center',
-      marginLeft: 20,
-      marginRight: 20,
-      marginTop: 30,
-    },
-    textSecond: {
-      fontSize: 16,
-      marginLeft: 20,
-      marginRight: 20,
-      marginTop: 30,
-    },
-  });
 
 export default withNavigation(Story);

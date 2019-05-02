@@ -19,8 +19,7 @@ class StoryItem extends Component {
     return(
       <TouchableOpacity onPress={this._onViewStory}>
         <View style={styles.rowContainer}>
-          <Image source={this.props.thumbnail} style={styles.thumbnail}
-            resizeMode="contain" />
+          <Image  style={styles.thumbnail} source={this.props.thumbnail}/>
           <View style={styles.rowText}>
             <Text style={styles.title} numberOfLines={2} ellipsizeMode ={'tail'}>
               {this.props.title}
@@ -65,8 +64,15 @@ const styles = StyleSheet.create({
   },
   thumbnail: {
     flex: 1,
+    paddingTop: 20,
+    paddingBottom: 20,
     height: undefined,
-    width: undefined
+    width: undefined,
+    borderRadius: 45,
+    shadowOffset:{  width: 1,  height: 1,  },
+    shadowColor: '#CCC',
+    shadowOpacity: 1.0,
+    shadowRadius: 5
   },
   rowText: {
     flex: 4,

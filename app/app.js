@@ -13,27 +13,26 @@ import StoryList from './screens/storylist';
 import HowToPlay from './screens/howToPlay';
 import Story from './screens/story';
 
-class HomeScreen extends React.Component {
-  render() {
-    return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text>Home!</Text>
-      </View>
-    );
-  }
-}
-
-
 const TabNavigator = createBottomTabNavigator(
   {
-  Home: HomeScreen,
-  'Stories': StoryList,
-  Story: {screen: Story},
   'How To Play': HowToPlay,
+  'Stories': StoryList,
+  Story: Story,
   },
   {
-    initialRouteName: 'Stories',
-  }
+    tabBarOptions: {
+      activeTintColor: 'black',
+      labelStyle: {
+        fontSize: 13,
+      },
+      style: {
+        backgroundColor: '#d7e8f7',
+      },
+    }
+  },
+  {
+    initialRouteName: 'How To Play',
+  },
 );
 
 export default createAppContainer(TabNavigator);

@@ -3,7 +3,7 @@ import {
   StatusBar,
   StyleSheet,
   FlatList,
-  View
+  View,
 } from 'react-native';
 
 import StoryItem from './StoryItem';
