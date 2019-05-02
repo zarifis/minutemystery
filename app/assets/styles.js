@@ -5,7 +5,7 @@ const styles = StyleSheet.create({
       fontSize: 30,
       fontWeight: 'bold',
       textAlign: 'center',
-      marginTop: 50,
+      marginTop: 40,
     },
     text: {
       fontSize: 16,
@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
       marginTop: 10,
     },
     buttonStyle: {  
-      marginTop: 100, 
+      marginTop: 30, 
       flex: 1,
       alignItems:'center',
       backgroundColor: '#fff',

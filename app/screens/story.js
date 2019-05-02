@@ -21,8 +21,6 @@ class Story extends Component {
     }
   }
 
-
-  //<ScrollView style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
   render() {
     const { navigation } = this.props;
     const id = navigation.getParam('id', '0');

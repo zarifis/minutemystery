@@ -4,7 +4,7 @@ const stories = [
       title: 'Free Fall',
       scene: 'A man jumps off the top of a skyscraper. As he falls, he hears a phone ring. He thinks to himself “I’ve made a huge mistake”, right before he hits the ground and dies.',
       story: 'The man has believed that he was the last human alive after a catastrophic event. After a long time of survival and loneliness, he has decided to take his own life. Haering a phone ring inside the building during his fall makes him realize that there are more survivors.',
-      thumbnail: require('./img/skyscraper2.jpg')
+      thumbnail: require('./img/skyscraper.jpg')
     },
     {
       id: '2',
@@ -18,7 +18,7 @@ const stories = [
       title: 'Late Ring',
       scene: 'A man falls unconscious on the floor. A couple of minutes later, someone rings an ambulance. However, when help arrives, it is already too late.',
       story: 'The scene is set at an illegal boxing arena. A lot of money is bet on this game. When one of the fighter is knocked out, someone in the audience gets stabbed. It takes a few minutes for the rest of the audience to find the bookie bleeding on the floor and call an ambulance. Someone has bet a lot of money on the losing fighter, and has paid the bookie to rig the fight. In order to maintain his reputation, this person has placed a lackey in audience, with directions to stab the bookie if the fight does not go as planned.',
-      thumbnail: require('./img/ambulance2.jpg')
+      thumbnail: require('./img/ambulance.jpg')
     },
     {
       id: '4',
@@ -31,7 +31,7 @@ const stories = [
       id: '5',
       title: 'Tree Hugger',
       scene: 'A masked man dressed in black is dead on a tree',
-      story: 'The unfortunate person was a diver, who was picked up by an air tanker plane as it was filling up water to put out a fire in a forest. As the plane dumped the water on the burning forest, it also dumped the diver, whose body was stuck in that tree.',
+      story: 'This is the body of an unlucky diver who was picked up by an air tanker plane as it was filling up water to put out a fire in a forest. As the plane dumped the water on the burning forest, it also unloaded the body that got stuck in that tree.',
       thumbnail: require('./img/tree.png')
     },
     {

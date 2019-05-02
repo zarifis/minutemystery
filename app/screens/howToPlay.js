@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Button, TouchableOpacity, ScrollView, Text} from 'react-native';
+import {TouchableOpacity, ScrollView, Text, Image} from 'react-native';
 import {styles} from '../assets/styles';
 
 class HowToPlay extends Component {
@@ -8,12 +8,18 @@ class HowToPlay extends Component {
     this.props.navigation.navigate('Stories');
   }
 
+  // style={{flex:1, height: undefined, width: undefined}}
+  // style={{alignSelf: 'center',justifyContent:'center',alignItems: 'center', width:250,height: 250}} 
   render() {
     return (
       <ScrollView>
         <Text style={styles.title}>Minute Mystery</Text>
-        <Text style={styles.text}>Minute mystery is a simple game of lateral, out-of-the box thinking.</Text>
-
+        <Text style={styles.text}>Minute mystery is a simple game of lateral,
+          out-of-the box thinking.</Text>
+        <Image 
+          style={{alignSelf:'center', width:200,height: 200,marginTop: 20}} 
+          source={require('../assets/img/detective.png')}
+        />
         <Text style={styles.title}>How to play</Text>
         <Text style={styles.text}>One player (the narrator) reads the scene out loud 
         to the rest of the players (the detectives). The narrator also reads the story, 
