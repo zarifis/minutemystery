@@ -21,10 +21,22 @@ class Story extends Component {
     }
   }
 
+
   //<ScrollView style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
   render() {
     const { navigation } = this.props;
     const id = navigation.getParam('id', '0');
+
+    this.props.navigation.addListener(
+      'didBlur',
+      payload => {
+        console.debug('didBlur', payload);
+        this.setState({status: false})
+      }
+    );
+    // Remove the listener when you are done
+    //didBlurSubscription.remove();
+
     return(
       <ScrollView contentContainerStyle={{ alignItems: 'center', justifyContent: 'center' }}>
       <Image style={{width: 400, height: 400}} source={stories[id].thumbnail}/>
